@@ -8,6 +8,10 @@ import com.itextpdf.text.Font;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.tool.xml.XMLWorkerFontProvider;
 
+/**
+ * 
+ * @author kris
+ */
 public class ChineseFontProvider extends XMLWorkerFontProvider {
 
 	public Font getFont(String fontname, String encoding, boolean embedded, float size, int style, BaseColor color) {
