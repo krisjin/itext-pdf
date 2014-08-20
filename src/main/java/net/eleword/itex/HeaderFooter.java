@@ -16,7 +16,7 @@ public class HeaderFooter extends PdfPageEventHelper {
 
 	public HeaderFooter() {
 		font = new Font();
-		font.setColor(BaseColor.BLACK);
+		font.setColor(BaseColor.RED);
 		font.setSize(10);
 	}
 

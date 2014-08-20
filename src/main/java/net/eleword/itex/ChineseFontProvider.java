@@ -13,6 +13,7 @@ import com.itextpdf.tool.xml.XMLWorkerFontProvider;
  * @author kris
  */
 public class ChineseFontProvider extends XMLWorkerFontProvider {
+//	String ft="new Font(BaseFont.createFont("STSong-Light", "UniGB-UCS2-H", BaseFont.EMBEDDED),18)";
 
 	public Font getFont(String fontname, String encoding, boolean embedded, float size, int style, BaseColor color) {
 

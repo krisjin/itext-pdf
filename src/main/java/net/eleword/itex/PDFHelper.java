@@ -1,5 +1,11 @@
 package net.eleword.itex;
 
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -13,17 +19,37 @@ public class PDFHelper {
 
 	public static void encrypt(PdfWriter pdfWriter, String userName, String password) {
 		try {
-			pdfWriter.setEncryption("Hello".getBytes(), "World".getBytes(),  
-			        PdfWriter.ALLOW_SCREENREADERS,  
-			        PdfWriter.STANDARD_ENCRYPTION_128);
+			pdfWriter.setEncryption("Hello".getBytes(), "World".getBytes(), PdfWriter.ALLOW_SCREENREADERS,
+					PdfWriter.STANDARD_ENCRYPTION_128);
 		} catch (DocumentException e) {
 			e.printStackTrace();
 		}
 
 	}
-	
-	public static void generateCatalog(Document document,PdfWriter writer) throws DocumentException{
-		
+
+	public static InputStream getPdfHtmlTemplateWithString(String str) {
+		InputStream fis = new ByteArrayInputStream(str.getBytes());
+		return fis;
+	}
+
+	public static InputStream getPdfHtmlTemplateWithFile(String path) {
+		if (path == null) {
+			throw new IllegalArgumentException("pdf template path is null");
+		}
+		if (!(new File(path).exists())) {
+			throw new IllegalArgumentException("pdf template path is not exist");
+		}
+		InputStream fis = null;
+		try {
+			fis = new FileInputStream(path);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return fis;
+	}
+
+	public static void generateCatalog(Document document, PdfWriter writer) throws DocumentException {
+
 		// Code 1
 		document.add(new Chunk("Chapter 1").setLocalDestination("1"));
 
@@ -54,5 +80,5 @@ public class PDFHelper {
 		@SuppressWarnings("unused")
 		PdfOutline oline3 = new PdfOutline(root, PdfAction.gotoLocalPage("3", false), "Chapter 3");
 	}
-	
+
 }
