@@ -9,7 +9,7 @@ public class Font {
 
 	public static void main(String[] args) {
 //		Set<String> set = FontFactory.getRegisteredFamilies();
-		FontFactory.registerDirectories();
+//		FontFactory.registerDirectories();
 		Set<String> set = FontFactory.getRegisteredFonts();
 		
 		Iterator<String> iter = set.iterator();

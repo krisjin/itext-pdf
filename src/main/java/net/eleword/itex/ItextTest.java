@@ -30,7 +30,7 @@ public class ItextTest {
 		br.setOuputPath("C:/Users/kris/Desktop/ouput.pdf");
 		br.setTitleFontPath("E://gitrep//itext-pdf//src//main//resources//font//FZXiaoBiaoSong-B05S.ttf");
 		br.setReportDate("2014-06-30至2014-07-06");
-		br.setAuthor("和讯通编辑部");
+		br.setAuthor("编辑部");
 
 		ItextTest it = new ItextTest();
 
