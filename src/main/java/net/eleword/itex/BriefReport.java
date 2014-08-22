@@ -38,6 +38,8 @@ public class BriefReport {
 	private String titleColor = "255,0,0";
 
 	private String titleFontPath;
+	
+	private String titleSize;
 
 	private String reportFileName;
 
@@ -49,6 +51,14 @@ public class BriefReport {
 	
 	
 	
+	public String getTitleSize() {
+		return titleSize;
+	}
+
+	public void setTitleSize(String titleSize) {
+		this.titleSize = titleSize;
+	}
+
 	public String getAuthor() {
 		return author;
 	}
