@@ -75,15 +75,17 @@ hr {
 	padding-bottom: 20px;
 }
 
-.catalog-module-name {
+.catalog-module-name{
 	font-family: "HeiTi";
 	font-size: 14pt;
 	font-weight: bold;
 	word-break: break-all;
-	width: 100%;
+	
 }
 
-.catalog-module-title {
+.catalog-module-title td{
 	font-family: "KaiTi";
 	font-size: 12pt;
+	padding-left: 25pt;
+	
 }
