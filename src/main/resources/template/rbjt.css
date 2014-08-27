@@ -1,0 +1,89 @@
+#header {
+	
+}
+
+.header-title {
+	font-family: "FZXiaoBiaoSong";
+	font-size: 36pt;
+	text-align: center;
+	color: rgb(255, 0, 0);
+}
+
+.header-date {
+	font-family: "MicrosoftYaHei";
+	font-size: 12pt;
+	text-align: center;
+}
+
+.file {
+	border: 4px solid #FFA500;
+}
+
+/* table { */
+/* 	width: 100%; */
+/* 	border: 4px solid #FFA500; */
+/* 	height: auto; */
+/* 	min-height: 842px; */
+/* } */
+
+.divideLine {
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+
+hr {
+	height: 2px;
+	border: none;
+	border-top: 2px solid;
+	color: rgb(255, 0, 0);
+}
+
+.overviewTitle {
+	font-family: "HeiTi";
+	font-size: 16pt;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.symbol {
+	font-family: arial;
+	font-size: 12pt;
+}
+
+.overviewsModule-name {
+	font-family: "KaiTi";
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.overviewModule-content {
+	font-family: "KaiTi";
+	font-size: 14pt;
+	padding-left: 13pt;
+}
+
+.catalog {
+	
+}
+
+.catalogname {
+	font-family: "HeiTi";
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: center;
+	padding-top:25px;
+	padding-bottom: 20px;
+}
+
+.catalog-module-name {
+	font-family: "HeiTi";
+	font-size: 14pt;
+	font-weight: bold;
+	word-break: break-all;
+	width: 100%;
+}
+
+.catalog-module-title {
+	font-family: "KaiTi";
+	font-size: 12pt;
+}
