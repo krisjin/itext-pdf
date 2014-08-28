@@ -1,5 +1,6 @@
-#header {
-	
+body {
+	width: 980px;
+	margin: 68pt 54pt 68pt 54pt;
 }
 
 .header-title {
@@ -18,13 +19,6 @@
 .file {
 	border: 4px solid #FFA500;
 }
-
-/* table { */
-/* 	width: 100%; */
-/* 	border: 4px solid #FFA500; */
-/* 	height: auto; */
-/* 	min-height: 842px; */
-/* } */
 
 .divideLine {
 	padding-top: 5px;
@@ -50,6 +44,17 @@ hr {
 	font-size: 12pt;
 }
 
+.name-dot {
+	font-family: arial;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.name-dot2 {
+	font-family: arial;
+	font-size: 14pt;
+}
+
 .overviewsModule-name {
 	font-family: "KaiTi";
 	font-size: 14pt;
@@ -71,21 +76,81 @@ hr {
 	font-size: 14pt;
 	font-weight: bold;
 	text-align: center;
-	padding-top:25px;
-	padding-bottom: 20px;
+	padding-top: 25px;
+	padding-bottom: 10px;
 }
 
-.catalog-module-name{
+.catalog-module-name {
 	font-family: "HeiTi";
 	font-size: 14pt;
 	font-weight: bold;
-	word-break: break-all;
-	
+	padding-bottom: 8pt;
+	padding-top: 10pt;
 }
 
-.catalog-module-title td{
+.catalog-module-title {
 	font-family: "KaiTi";
 	font-size: 12pt;
-	padding-left: 25pt;
-	
+	padding-left: 10pt;
 }
+
+.content {
+	padding-top: 50pt;
+	padding-bottom: 30pt;
+}
+
+.c-module-name {
+	font-family: "HeiTi";
+	font-size: 16pt;
+	font-weight: bold;
+	padding-top: 15pt;
+}
+
+.c-module-title {
+	font-family: "KaiTi";
+	font-size: 14pt;
+	font-weight: bold;
+	padding-top: 15pt;
+	padding-bottom: 12pt;
+}
+
+.c-module-content {
+	font-family: "KaiTi";
+	font-size: 14pt;
+	padding-left: 22pt;
+}
+
+.c-module-content p {
+	line-height: 25pt;
+}
+.attach-title{
+	font-family:"HuaWenZhongSong";
+	font-size: 16pt;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 8pt;
+	padding-top: 5pt;
+}
+.attach-word{
+	font-family:"KaiTi";
+	font-weight: bold;
+	font-size: 16pt;
+}
+.attach-table td{
+	font-family: "FangSong";
+	border: 1px solid #1C1C1C;
+	padding:0pt;
+	margin:0pt;
+	font-size:10pt;
+}
+.thead td{
+	padding-top:10pt;
+	padding-bottom:10pt;
+	text-align: center;
+	background: #CFCFCF;
+}
+.subModuleName{
+	font-family: "HeiTi";
+	font-size:12pt;
+}
+

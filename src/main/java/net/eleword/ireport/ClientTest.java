@@ -1,16 +1,21 @@
 package net.eleword.ireport;
 
+import net.eleword.ireport.util.PathUtil;
+
 
 public class ClientTest {
 	public static void main(String[] args) throws Exception {
 
+		String template = PathUtil.getFullPathRelateClass("../../../../template",ClientTest.class);
+		System.out.println(template);
 		BriefReport br = new BriefReport();
-		br.setTemplatePath("E:/rep/itext-pdf/src/main/resources/template/rbjt.html");
+		br.setTemplatePath(template+"/rbjt.html");
 		br.setTitle("中国人民保险集团|舆情周报");
-		br.setOuputPath("C:/Documents and Settings/Administrator/桌面/ouput.pdf");
-//		br.setTitleFontPath("E:/rep/itext-pdf/src/main/resources/font/FZXiaoBiaoSong-B05S.ttf");
-		br.setReportDate("2014-06-30至2014-07-06");
-		br.setAuthor("编辑部");
+		br.setOuputPath("C:/Users/kris/Desktop/ouput.pdf");
+		br.setCssPath(template+"/rbjt.css");
+		
+		
+		
 		br.setMarginLeft(54);
 		br.setMarginRight(54);
 		br.setMarginTop(68);

@@ -2,6 +2,9 @@ package net.eleword.ireport;
 
 import net.eleword.ireport.model.Summary;
 
+/**
+ * @author krisjin
+ */
 public class BriefReport {
 
 	private int marginLeft;
@@ -50,11 +53,30 @@ public class BriefReport {
 	
 	private String author;
 	
-	
 	private Summary summary;
 	
+	private String css;
+	
+	private String cssPath;
 	
 	
+	
+	public String getCss() {
+		return css;
+	}
+
+	public void setCss(String css) {
+		this.css = css;
+	}
+
+	public String getCssPath() {
+		return cssPath;
+	}
+
+	public void setCssPath(String cssPath) {
+		this.cssPath = cssPath;
+	}
+
 	public Summary getSummary() {
 		return summary;
 	}

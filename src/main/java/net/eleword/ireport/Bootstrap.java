@@ -13,6 +13,8 @@ import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.BaseFont;
+import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.tool.xml.XMLWorker;
 import com.itextpdf.tool.xml.XMLWorkerFontProvider;
@@ -33,8 +35,6 @@ import com.itextpdf.tool.xml.pipeline.html.HtmlPipelineContext;
  * @author krisjin
  */
 public class Bootstrap {
-	public static final String HTML = "E:/rep/itext-pdf/src/main/resources/template/rbjt.html";
-	public static final String CSS = "E:/rep/itext-pdf/src/main/resources/template/rbjt.css";
 	
 	
 	public static void startup(BriefReport br) throws DocumentException, IOException {
@@ -47,6 +47,7 @@ public class Bootstrap {
 		Document doc = new Document(rect);
 
 		doc.setMargins(br.getMarginLeft(), br.getMarginRight(), br.getMarginTop(), br.getMarginBottom());
+		
 
 		PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream(br.getOuputPath()));
 
@@ -56,12 +57,12 @@ public class Bootstrap {
 		
 		FontFactory.registerDirectories();
 
-		XMLWorkerFontProvider fontProvider = new XMLWorkerFontProvider(XMLWorkerFontProvider.DONTLOOKFORFONTS);
+		XMLWorkerFontProvider fontProvider = new XMLWorkerFontProvider();
 		registerFont(fontProvider);
 		
 		
 		CSSResolver cssResolver = new StyleAttrCSSResolver();
-		CssFile cssFile = XMLWorkerHelper.getCSS(new FileInputStream(CSS));
+		CssFile cssFile = XMLWorkerHelper.getCSS(new FileInputStream(br.getCssPath()));
 		cssResolver.addCss(cssFile);
 		
 		CssAppliers cssAppliers = new CssAppliersImpl(fontProvider);
@@ -74,7 +75,7 @@ public class Bootstrap {
 
 		XMLWorker worker = new XMLWorker(css, true);
 		XMLParser p = new XMLParser(worker);
-		p.parse(new FileInputStream(HTML),Charset.forName("UTF-8"));
+		p.parse(new FileInputStream(br.getTemplatePath()),Charset.forName("UTF-8"));
 		doc.close();
 
 	}
@@ -88,5 +89,26 @@ public class Bootstrap {
 			fontProvider.register(entry.getValue(), entry.getKey());
 		}
 	}
+	
+	
+	public static void crateTable(Document doc){
+		//BaseFont.createFont(name, encoding, embedded)
+		PdfPTable table = new PdfPTable(4);
+		
+		try {
+			table.setWidthPercentage(100);
+			table.setWidths(new int[]{4,5,2,2});
+			//table.set
+			
+			
+			
+			
+		} catch (DocumentException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
 
 }

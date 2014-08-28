@@ -4,58 +4,102 @@
 <title></title>
 </head>
 <body>
-<!-- dfdsfaf -->
-
+[#pdfConfig]
+	margin:54 68pt;
+	background:159 121 238;
+[/#pdfConfig]
 <div id="header">
-
   <div class="header-title">
-	<p>[#reportTitle]字[/#reportTitle]</p>
-	<p style="line-height:26pt;">#字字字#</p>
+	<p>[#reportTitle]</p>
+	<p style="line-height:26pt;"></p>
   </div>
   
   <div class="header-date">
-	<p>[#reportDate]字[/#reportDate]</p>
+	<p>[#reportDate] 和讯通编辑部  编</p>
   </div>
   
   <div class="divideLine">
 	<hr></hr>
   </div>
-  
-  <div class="overview">
-	 <div class="overviewTitle">[#overviewTitle]字[/#overviewTitle]</div>
+</div> 
+
+<div class="overview">
+	 <div class="overviewTitle">[#overviewTitle]</div>
 	 [#overviewModule]
 	 <div class="overviewsModule-name">
 		<span class="symbol">&#9632;</span>
-		[#overviewName]楷体[/#overviewName]
+		[#overviewName]
 	 </div>
 	 <div class="overviewModule-content">
-		[#overviewContent]内容[/#overviewContent]
+		[#overviewContent]
 	 </div>
 	 [/#overviewModule]
-  </div>
-  
-  <div class="catalog">
-	 <p class="catalogname">目录</p>
-	 
-	 <div class="catalog-module">
-		<table>
-			<tr class="catalog-module-name">
-				<td>一、集团及子公司新闻集团及.............................................................................................</td>
-			</tr>
-			<tr class="catalog-module-title">
-				<td>1、谷歌大兴土木 欲将巨型停机坪改成办公室.........................................................</td>
-			</tr>
-		</table>
-
-	 </div>
-  </div>
-  
-			
 </div>
-		
+  
+<div class="catalog">
+	 <p class="catalogname">目录</p>
+	 [#catalog]
+	 <div>
+		<div class="catalog-module-name">
+				[#moduleName]
+		</div>
+		<div class="catalog-module-title">
+			<ol>
+				<li>
+					[#newsTitle][#media]
+				</li>
+			</ol>
+		</div>
+	 </div>
+	 [/#catalog]
+</div>
+  
+  
+<div class="content">
+[#content]
+  <div class="c-module">
+	<div class="c-module-name">
+		[#moduleName]
+		[#subModuleName]<p class="subModuleName">【[#subModuleNameValue]】</p>[/#subModuleName]
+	</div>
+	<div class="c-module-title">
+	  	[#newsTitle]
+	</div>
+	<div class="c-module-content">
+		<p>[#newsContent]</p>
+	</div>
+  </div>
+[/#content]
+</div>	
+
+<div class="attach">
+	<div class="attach-word">
+		附件:
+	</div>
+	<p class="attach-title">
+		本周重要新闻详情表
+	</p>
+	<div>
+		<table class="attach-table">d
+			<tr class="thead">
+					 <td style="width: 140pt;">
+					 	新闻标题
+					 </td>
+					 <td style="width: 200pt;">
+					 	链接地址
+					 </td>
+					 <td style="width: 80pt;">
+					 	发布时间
+					 </td>
+					 <td style="width: 60pt;">
+					 	作者
+					 </td>
+			</tr>
+			
+			[#attach]newsTitle|newsHref|newsPublishDate|newAuthor[/#attach]
+		</table>
+	</div>
+</div>
 	
-			
-			
-			
 </body>
 </html>
