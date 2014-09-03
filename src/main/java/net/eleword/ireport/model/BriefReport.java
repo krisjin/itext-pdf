@@ -1,9 +1,7 @@
 package net.eleword.ireport.model;
 
-
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author shijingui
@@ -21,7 +19,7 @@ public class BriefReport {
 
 	private LinkedHashMap<String, String> moduleDescription;
 
-	private LinkedHashMap<String, Map> publicOpinionOverview;
+	private LinkedHashMap<String, String> publicOpinionOverview;
 
 	private String publicOpinionSummary;
 
@@ -33,11 +31,11 @@ public class BriefReport {
 		this.moduleDescription = moduleDescription;
 	}
 
-	public LinkedHashMap<String, Map> getPublicOpinionOverview() {
+	public LinkedHashMap<String, String> getPublicOpinionOverview() {
 		return publicOpinionOverview;
 	}
 
-	public void setPublicOpinionOverview(LinkedHashMap<String, Map> publicOpinionOverview) {
+	public void setPublicOpinionOverview(LinkedHashMap<String, String> publicOpinionOverview) {
 		this.publicOpinionOverview = publicOpinionOverview;
 	}
 

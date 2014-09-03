@@ -15,7 +15,7 @@ public class News {
 	private String newsContent;
 	private String newsDescription;
 	private String newsTitle;
-	private int sameNewsCount;
+	private String forwardCount;
 	private List<String> forwardMedia;
 	private String newsLink;
 
@@ -67,13 +67,6 @@ public class News {
 		this.newsTitle = newsTitle;
 	}
 
-	public int getSameNewsCount() {
-		return sameNewsCount;
-	}
-
-	public void setSameNewsCount(int sameNewsCount) {
-		this.sameNewsCount = sameNewsCount;
-	}
 
 	public List<String> getForwardMedia() {
 		return forwardMedia;
@@ -90,5 +83,14 @@ public class News {
 	public void setNewsLink(String newsLink) {
 		this.newsLink = newsLink;
 	}
+
+	public String getForwardCount() {
+		return forwardCount;
+	}
+
+	public void setForwardCount(String forwardCount) {
+		this.forwardCount = forwardCount;
+	}
+	
 
 }

@@ -18,5 +18,10 @@ public class HtmlTagName {
 	
 	public static final String NEWS_TITLE="h4";
 	
+	public static final String TAG_ATTRIBUTE_NAME="name";
+	
+	public static final String NEWS_CONTENT="metaData_content";
+
+	
 
 }
