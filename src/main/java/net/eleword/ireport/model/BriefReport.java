@@ -23,6 +23,26 @@ public class BriefReport {
 
 	private String publicOpinionSummary;
 
+	private String cssStyle;
+
+	private String outputPath;
+
+	private String background;
+
+	private String margin;
+	
+	private String template;
+	
+	
+
+	public String getTemplate() {
+		return template;
+	}
+
+	public void setTemplate(String template) {
+		this.template = template;
+	}
+
 	public LinkedHashMap<String, String> getModuleDescription() {
 		return moduleDescription;
 	}
@@ -77,6 +97,39 @@ public class BriefReport {
 
 	public void setSubTitle(String subTitle) {
 		this.subTitle = subTitle;
+	}
+
+	public String getCssStyle() {
+		return cssStyle;
+	}
+
+	public void setCssStyle(String cssStyle) {
+		this.cssStyle = cssStyle;
+	}
+
+	public String getOutputPath() {
+		return outputPath;
+	}
+
+	public void setOutputPath(String outputPath) {
+		this.outputPath = outputPath;
+	}
+
+
+	public String getBackground() {
+		return background;
+	}
+
+	public void setBackground(String background) {
+		this.background = background;
+	}
+
+	public String getMargin() {
+		return margin;
+	}
+
+	public void setMargin(String margin) {
+		this.margin = margin;
 	}
 
 }

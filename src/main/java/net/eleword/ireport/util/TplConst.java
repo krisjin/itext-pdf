@@ -26,6 +26,8 @@ public class TplConst {
 	public static final String PROP_NEWS_MEDIA = "#newsMedia";
 
 	public static final String PROP_SUB_MODULE_NAME = "#subModuleName";
+	
+	public static final String PROP_NEWS_CONTENT="#newsContent";
 
 	public static final String TAG_OVERVIEW_MODULE_LOOP = "OverviewModuleLoop";
 
@@ -37,9 +39,10 @@ public class TplConst {
 	
 	
 	
+	
 	public static final String ID_OVERVIEW="OverView";
 	public static final String ID_CATALOG="Catalog";
-	public static final String ID_CONTENT="content";
+	public static final String ID_CONTENT="Content";
 	
 
 }
