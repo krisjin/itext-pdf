@@ -62,7 +62,7 @@ public class BriefReportParse {
 				String forwardCount = forwardCountEle.get(i).html();
 				String forwardMedia = forwardMediaEle.get(i).html();
 				String newsContent = contentEle.get(i).html();
-
+			
 				news.setNewsLink(newsLink);
 				news.setNewsTitle(newsTitle);
 				news.setNewsAuthor(newsAuthor);
@@ -78,10 +78,10 @@ public class BriefReportParse {
 		return newsList;
 	}
 
-	// public static void main(String[] args) throws IOException {
-	//
-	// parseNews("");
-	//
-	// }
+//	public static void main(String[] args) throws IOException {
+//
+//		parseNews("");
+//
+//	}
 
 }
